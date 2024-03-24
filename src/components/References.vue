@@ -20,17 +20,20 @@
 </template>
 
 <script>
-    import referencesText from "@/assets/text/referencesText";
-    export default {
-        name: 'References',
-        data() {
-            return {
-                text: referencesText.referencesContent
-            }
-        }
+import { ref } from 'vue';
+import referencesText from "@/assets/text/referencesText";
+
+export default {
+    name: 'References',
+    setup() {
+        // Use the ref function to make the text reactive
+        const text = ref(referencesText.referencesContent);
+
+        // Return the reactive properties to be used in the template
+        return { text };
     }
+}
 </script>
-/*Scope USWDS styles*/
-<style scoped src="../../node_modules/uswds/dist/css/uswds.min.css"></style>
+
 <style scoped lang="scss">
 </style>

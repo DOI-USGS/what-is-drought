@@ -25,7 +25,7 @@
         name: "InternetExplorerPageVue",
         data() {
             return {
-                title: process.env.VUE_APP_TITLE
+                title: import.meta.env.VITE_APP_TITLE
             }
         }
     }

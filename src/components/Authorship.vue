@@ -60,7 +60,7 @@
           </span>
         </span>
         <span
-          v-if="showAditionalContributionStatement"
+          v-if="showAdditionalContributionStatement"
           id="additional-author-contribution"
         >
           <span
@@ -77,44 +77,47 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { isMobile } from 'mobile-device-detect';
 import authors from "@/assets/text/authors";
-export default {
-  name: "Authorship",
-    components: {
-    },
-    props: {
-    },
-    data() {
-      return {
-        publicPath: process.env.BASE_URL, // allows the application to find the files when on different deployment roots
-        appTitle: process.env.VUE_APP_TITLE, // Pull in title of page from Vue environment (set in .env)
-        mobileView: isMobile, // test for mobile
-        primaryAuthors: authors.primaryAuthors,
-        additionalAuthors: authors.additionalAuthors,
-        showAuthors: null, // Turn on or off attribution for all authors
-        showAdditionalAuthors: null, // If showAuthors is true, turn on or off attribution for additional authors
-        showContributionStatements: true, // If showAuthors is true, turn on or off contribution statements for ALL authors
-        showAditionalContributionStatement: null // If showAuthors is true and if showContributionStatements is true, turn on or off contriubtion statements for ADDITIONAL authors
-      }
-    },
-    mounted(){   
-      console.log(this.appTitle)
-      this.showAuthors = this.primaryAuthors.length > 0 ? true: false; // Show author statements for any authors
-      this.showAdditionalAuthors =  this.additionalAuthors.length > 0 ? true : false; // Show author statements for additional authors if any are listed
-      this.showAditionalContributionStatement = this.additionalAuthors.length > 0 ? true : false; // Show contributions statements for additional authors if any are listed AND showContributionStatements is true
-    },
-    methods:{
-      isMobile() {
-              if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                  return true
-              } else {
-                  return false
-              }
-          }
-    }
-}
+import { ref, onMounted } from 'vue';
+
+// allows the application to find the files when on different deployment roots
+const publicPath = import.meta.env.BASE_URL;
+// Pull in title of page from Vue environment (set in .env)
+const appTitle = import.meta.env.VITE_APP_TITLE;
+// test for mobile
+const mobileView = isMobile;
+
+
+const primaryAuthors = authors.primaryAuthors;
+const additionalAuthors = authors.additionalAuthors;
+// Turn on or off attribution for all authors
+const showAuthors = ref(null);
+// If showAuthors is true, turn on or off attribution for additional authors
+const showAdditionalAuthors = ref(null);
+// If showAuthors is true, turn on or off contribution statements for ALL authors
+const showContributionStatements = ref(true);
+// If showAuthors is true and if showContributionStatements is true, turn on or off contribution statements for ADDITIONAL authors
+const showAdditionalContributionStatement = ref(null);
+
+onMounted(() => {
+  console.log(appTitle);
+  showAuthors.value = primaryAuthors.length > 0;
+  showAdditionalAuthors.value = additionalAuthors.length > 0;
+  showAdditionalContributionStatement.value = additionalAuthors.length > 0;
+});
+
+// test for mobile device
+const checkIfMobile = () => {
+  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+
 </script>
 <style>
 #author-container {

@@ -2554,9 +2554,7 @@
 </template>
 
 <script>
-export default {
-    name: "DroughtCharts"
-}
+
 </script>
 <style lang="scss" scoped>
 .woodcutBlack {

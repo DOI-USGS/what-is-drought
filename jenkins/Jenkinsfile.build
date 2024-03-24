@@ -8,6 +8,8 @@ pipeline {
     parameters {
         choice(choices: ['test', 'beta', 'prod'], description: 's3 bucket that the build will target', name: 'BUILD_DEST')
         choice(choices: ['test', 'beta', 'prod'], description: 'The mode selected will tell Vue which environment variables to use. Various feature flags will be disabled/enabled depending on mode. More importantly, the source of the tiles will change, with the development build loading tiles from the test S3 bucket and the production build loading tiles from the prod S3 bucket.', name: 'VUE_BUILD_MODE')
+        choice(choices: ['what-is-drought'], description: 'project name, url extension, and GitLab repository name, matching VITE_APP_TITLE set in .env', name: 'VITE_APP_TITLE')
+        gitParameter(name: 'BRANCH_TAG',
         gitParameter(name: 'BRANCH_TAG',
                      type: 'PT_BRANCH_TAG',
                      selectedValue: 'DEFAULT',
@@ -37,9 +39,9 @@ pipeline {
             steps {
 
                 sh """
-                    docker build . --tag="what-is-drought-docker" --build-arg BUILDTARGET=${params.BUILD_DEST} --build-arg VUE_BUILD_MODE=${params.VUE_BUILD_MODE}
-                    docker run what-is-drought-docker
-                    pathtemplate=":tmp/what-is-drought/dist"
+                    docker build . --tag="${params.VITE_APP_TITLE}-docker" --build-arg BUILD_DEST=${params.BUILD_DEST} --build-arg VUE_BUILD_MODE=${params.VUE_BUILD_MODE} --build-arg VITE_APP_TITLE=${params.VITE_APP_TITLE}
+                    docker run ${params.VITE_APP_TITLE}-docker
+                    pathtemplate=":tmp/${params.VITE_APP_TITLE}/dist"
                     dockerinstanceid=\$( docker ps -l -q )
                     docker cp  "\${dockerinstanceid}\${pathtemplate}" "$WORKSPACE"
                     docker rm "\${dockerinstanceid}"
@@ -52,13 +54,13 @@ pipeline {
             steps {
                 script {
                     if ("${params.BUILD_DEST}" == "prod") {
-                        targetDomain = "s3://water-visualizations-prod-website/visualizations/what-is-drought"
+                        targetDomain = "s3://water-visualizations-prod-website/visualizations/${params.VITE_APP_TITLE}"
                     }
                     else if ("${params.BUILD_DEST}" == "beta") {
-                        targetDomain = "s3://water-visualizations-beta-website/visualizations/what-is-drought"
+                        targetDomain = "s3://water-visualizations-beta-website/visualizations/${params.VITE_APP_TITLE}"
                     }
                     else {
-                        targetDomain = "s3://water-visualizations-test-website/visualizations/what-is-drought"
+                        targetDomain = "s3://water-visualizations-test-website/visualizations/${params.VITE_APP_TITLE}"
                     }
                 }
                 sh """

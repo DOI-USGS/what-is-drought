@@ -2,26 +2,15 @@
   <div id="visualization">
     <DroughtThresholds />
     <References />
-    <authorship />
+    <Authorship />
   </div>
 </template>
 
-<script>
+<script setup>
+import DroughtThresholds from '@/components/DroughtThresholds.vue';
+import References from '@/components/References.vue';
+import Authorship from '@/components/Authorship.vue';
 
-export default {
-    name: 'Visualization',
-    components: {
-      DroughtThresholds: () => import( /* webpackPreload: true */ /*webpackChunkName: "section"*/ "./../components/DroughtThresholds"),
-      References: () => import( /*webpackChunkName: "References"*/ "./../components/References"),
-      authorship: () => import( /* webpackPreload: true */ /*webpackChunkName: "section"*/ "./../components/Authorship")
-    },
-    computed: {
-    },
-    mounted(){
-    },
-    methods:{
-    }
-} 
 </script>
 
 <style lang="scss">
