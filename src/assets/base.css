@@ -6,14 +6,21 @@
 
   --black-soft: #151515;
   --dodger-blue: #1e90ff;
+  --grey-blue: #406992;
+  --usgs-blue: #00264c;
 
   font-size: 62.5%;
+
+  --title-font: 'Source Sans Pro';
+  --default-font: 'Source Sans Pro';
 }
 
 /* semantic color variables for this project */
 :root {
   --color-background: var(--white);
+  --color-title-text: var(--usgs-blue);
   --color-text: var(--black-soft);
+  --color-link: var(--grey-blue);
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -39,15 +46,39 @@ body {
     color 0.5s,
     background-color 0.5s;
   line-height: 1.2;
-  font-family:
-    Source Sans Pro,
-    sans-serif;
+  font-family: sans-serif;
+  font-family: var(--default-font);
   font-size: 2rem;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 h1 {
-  font-size: 2.5rem;
-  font-weight: 500;
+  font-size: 5.6rem;
+  font-weight: 200;
+  color: var(--color-title-text);
+  padding: 8rem 0 8rem 0;
+  @media only screen and (max-width: 600px) {
+    font-size: 5rem;
+    padding: 3rem 0 3rem 0;
+  }
+}
+h2 {
+  font-size: 3.6rem;
+  font-weight: 300;
+  color: var(--color-title-text);
+  padding: 5rem 0 0 0;
+  margin-bottom: 2rem;
+  @media only screen and (max-width: 600px) {
+    font-size: 3.2rem;
+  }  
+}
+h3 {
+  font-size: 2.6rem;
+  font-weight: 600;
+  color: var(--color-title-text);
+  padding: 0 0 1.5rem 0;
+}
+p, text, li {
+  padding: 0 0 1rem 0;
 }

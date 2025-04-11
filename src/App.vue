@@ -44,8 +44,7 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;500;600;700;800&display=swap');
 $SourceSans: 'Source Sans Pro', sans-serif;
-$textcolor: #333534;
-$darkGrey: #212122;
+
 // $familyMain: 'Public sans', sans-serif;
 // whole page except header fit within viewport - no scrolling
 #app {
@@ -58,6 +57,7 @@ html,
 body {
       height: 100%;
       background-color: white;
+      color: var(--color-text);
       margin: 0;
       padding: 0;
       line-height: 1.2;
@@ -77,7 +77,6 @@ h1{
   line-height: 1;
   text-align: left;
   text-shadow: 1px 1px 100px rgba(0,0,0,.8);
-    //color: $textcolor;
   @media screen and (max-width: 600px) {
     font-size: 4.75em;
   }
@@ -89,7 +88,6 @@ h2{
   font-size: 3.75em;
   margin-top: 0px;
   line-height: 1;
-    //color: $textcolor;
   @media screen and (max-width: 600px) {
     font-size: 3em;
   }
@@ -99,7 +97,6 @@ h3{
   padding-top: .25em;
   font-family: $SourceSans;
   font-weight: 300;
-    color: $textcolor;
   @media screen and (max-width: 600px) {
       font-size: 2em;
   }  
@@ -107,7 +104,6 @@ h3{
 p, text {
   padding: 1em 0 0 0; 
   font-family: $SourceSans;
-  color: $textcolor;
 }
 input[type=button] {
         font-family: $SourceSans;
@@ -124,7 +120,7 @@ input[type=button] {
     }  
   }
   .text-content h2 {
-    color: $darkGrey;
+    color: var(--color-title-text);
     font-weight: 600;
     text-align: left;
     font-size: 1.3em;
@@ -215,5 +211,12 @@ sup {
   left: 0;
   width: 100vw;
 }
-
+/* set color of links throughout */
+a {
+  color: var(--color-link);
+  font-weight: 600;
+  @media only screen and (max-width: 600px) {
+    text-decoration: underline;
+  }
+}
 </style>
