@@ -31,6 +31,7 @@
       :authors="authors"
       :include-title="false"
     />
+    <VizIconGrid />
   </div>
 </template>
 
@@ -40,6 +41,7 @@ import authors from "@/assets/text/authors"
 import DroughtThresholds from '@/components/DroughtThresholds.vue';
 import ReferencesSection from '@/components/ReferencesSection.vue';
 import AuthorshipSection from '@/components/AuthorshipSection.vue';
+import VizIconGrid from "../components/VizIconGrid.vue";
 </script>
 
 <style lang="scss">
