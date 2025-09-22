@@ -6,7 +6,7 @@ export default {
             title: 'Link to five droughts that changed history website',
             id: 'drought-timeline',
             url: 'https://labs.waterdata.usgs.gov/visualizations/drought-timeline/',
-            img_src: 'drought_timeline_thumbnail.webp',
+            img_src: 'drought-timeline_thumbnail.png',
             alt: 'Thumbnail image for five droughts that changed history website'
         },
         {
