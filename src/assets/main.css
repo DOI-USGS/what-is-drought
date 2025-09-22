@@ -7,3 +7,30 @@
   /* height: calc(100vh + 87px); 87 is the height of the USGS header */
   margin: 0 auto;
 }
+#visualization a {
+  color: var(--color-link);
+  font-weight: 600;
+  @media only screen and (max-width: 600px) {
+    text-decoration: underline;
+  }
+}
+.text-container {
+  max-width: 70rem; /* 70 pixels on desktop */
+  margin: 0 auto 0 auto;
+  @media only screen and (max-width: 600px) {
+    max-width: 90vw; /* 90% of view width on mobile */
+  }
+}
+.section-title {
+  font-family: sans-serif; /* This is fallback font for old browsers */
+  font-family: var(--title-font);
+  width: 100%;
+  text-align:left; 
+  border-bottom: 1px solid var(--color-lowlight); 
+  overflow: inherit;
+  line-height: 1.2;
+}
+.section-title span {
+  position: relative;
+  top: 1rem;
+}

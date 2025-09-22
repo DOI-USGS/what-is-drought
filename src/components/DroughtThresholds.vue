@@ -1,9 +1,9 @@
 <template>
   <div class="another-container">
     <div class="grid-container">
-      <h2 class="title-text">
-        What is <span class="emph">streamflow</span> drought?
-      </h2>
+      <h1 class="title-text">
+        What is <span class="emph">streamflow drought</span>?
+      </h1>
       <div
         class="chevron"
         aria-hidden="true"
