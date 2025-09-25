@@ -1,11 +1,11 @@
 <template>
   <div id="code-repository-link-container">
     <a
-      :href=gitHubRepositoryLink
+      :href="gitHubRepositoryLink"
       target="_blank"
       aria-label="github link"
-    >See the code behind this visualization
-      <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'github' }" />
+    >
+      See the code behind this visualization <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'github' }" />
     </a>
   </div>
 </template>
@@ -20,13 +20,18 @@
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    background-color: #c2c4c5;
+    background-color: var(--color-code-links-background);
     margin: 0 auto;
     padding: 0.4rem 1.5rem;
     a {
       color: var(--color-text);
       margin-left: 10px;
       text-decoration: none;
+      font-weight: 300;
+    }
+    svg {
+      width: 20px;
+      vertical-align: -0.4rem;
     }
   }
 

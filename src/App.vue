@@ -42,10 +42,8 @@
 
 <style lang="scss">
 // Fonts
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;500;600;700;800&display=swap');
-$SourceSans: 'Source Sans Pro', sans-serif;
-$textcolor: #333534;
-$darkGrey: #212122;
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+$SourceSans: 'Source Sans 3', sans-serif;
 // $familyMain: 'Public sans', sans-serif;
 // whole page except header fit within viewport - no scrolling
 #app {
@@ -54,64 +52,11 @@ $darkGrey: #212122;
 }
 
 // Type
-html,
-body {
-      height: 100%;
-      background-color: white;
-      margin: 0;
-      padding: 0;
-      line-height: 1.2;
-      font-size: 20px;
-      font-weight: 400;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      width: 100%;
-      @media screen and (max-width: 600px) {
-        font-size: 16px;
-      }
+
+
+  input[type=button] {
+    font-family: $SourceSans;
   }
-h1{
-  font-size: 4.5em;
-  font-weight: 500;
-  font-family: $SourceSans;
-  line-height: 1;
-  text-align: left;
-  text-shadow: 1px 1px 100px rgba(0,0,0,.8);
-    //color: $textcolor;
-  @media screen and (max-width: 600px) {
-    font-size: 4.75em;
-  }
-}
-h2{
-  font-weight: 200;
-  text-align: left;
-  font-family: $SourceSans;
-  font-size: 3.75em;
-  margin-top: 0px;
-  line-height: 1;
-    //color: $textcolor;
-  @media screen and (max-width: 600px) {
-    font-size: 3em;
-  }
-}
-h3{
-  font-size: 2.25em;
-  padding-top: .25em;
-  font-family: $SourceSans;
-  font-weight: 300;
-    color: $textcolor;
-  @media screen and (max-width: 600px) {
-      font-size: 2em;
-  }  
-}
-p, text {
-  padding: 1em 0 0 0; 
-  font-family: $SourceSans;
-  color: $textcolor;
-}
-input[type=button] {
-        font-family: $SourceSans;
-    }
 
 // General Layout  
   .text-content {
@@ -122,17 +67,6 @@ input[type=button] {
     @media screen and (max-width: 600px) {
         padding: 10px;
     }  
-  }
-  .text-content h2 {
-    color: $darkGrey;
-    font-weight: 600;
-    text-align: left;
-    font-size: 1.3em;
-    margin-top: 5px;
-    line-height: 1.2;
-    @media screen and (max-width: 600px) {
-      font-size: 2em;
-    }
   }
   .flex-container {
     display: flex;
