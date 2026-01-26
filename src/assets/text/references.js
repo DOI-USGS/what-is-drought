@@ -7,7 +7,7 @@ export default {
         num:"1",
         authors: "Smith, E.",
         year: "2023",
-        title: "Drought Prediction Science.",
+        title: "Drought Prediction Science",
         link:"https://www.usgs.gov/mission-areas/water-resources/science/drought-prediction-science",
         ref:" https://www.usgs.gov/mission-areas/water-resources/science/drought-prediction-science"
     },
@@ -17,7 +17,7 @@ export default {
         num:"2",
         authors: "Simeone, C.",
         year: "2022",
-        title: "Streamflow Drought Metrics for Select United States Geological Survey Streamgages for Three Different Time Periods from 1921 - 2020.",
+        title: "Streamflow Drought Metrics for Select United States Geological Survey Streamgages for Three Different Time Periods from 1921 - 2020",
         link:"https://doi.org/10.5066/P92FAASD",
         ref:" https://doi.org/10.5066/P92FAASD"
     },
@@ -27,7 +27,7 @@ export default {
         num:"3",
         authors: "Hammond, J. C., Simeone, C., Hecht, J. S., Hodgkins, G. A., Lombard, M., McCabe, G., et al.",
         year: "2022",
-        title: "Going beyond low flows: Streamflow drought deficit and duration illuminate distinct spatiotemporal drought patterns and trends in the U.S. during the last century.",
+        title: "Going beyond low flows: Streamflow drought deficit and duration illuminate distinct spatiotemporal drought patterns and trends in the U.S. during the last century",
         link:"https://doi.org/10.1029/2022WR031930",
         ref:" Water Resources Research, 58, e2022WR031930"
     },
@@ -37,7 +37,7 @@ export default {
         num:"4",
         authors: "Van Loon, A. F.",
         year: "2015",
-        title: "Hydrological drought explained.",
+        title: "Hydrological drought explained",
         link:"https://doi.org/10.1002/wat2.1085",
         ref:" WIREs Water, 2: 359-392"
     }
