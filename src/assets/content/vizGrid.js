@@ -17,11 +17,11 @@ export default {
             alt: 'Thumbnail image for modeling streamflow drought website'
         },
         {
-            title: 'Link to streamflow drought assessment and forecasting tool',
+            title: 'Link to River DroughtCast mapper',
             id: 'streamflow-drought-forecasts',
             url: 'https://water.usgs.gov/vizlab/streamflow-drought-forecasts/',
             img_src: 'streamflow-drought-forecasts_metacard.png',
-            alt: 'Thumbnail image for streamflow drought assessment and forecasting tool'
+            alt: 'Thumbnail image for River DroughtCast mapper'
         }   
     ]
 };
