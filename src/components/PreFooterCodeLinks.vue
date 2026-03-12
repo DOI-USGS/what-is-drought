@@ -46,7 +46,7 @@
   &__divider {
     border-top: 1px solid #d4d8dd;
     margin: 0 auto 1.5rem;
-    width: 100%;
+    width: min(90%, 800px);
   }
 
   &__content {
@@ -54,7 +54,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 0.75rem;
-    width: 100%;
+    width: min(90%, 800px);
     margin: 0 auto;
   }
 
