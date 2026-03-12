@@ -14,7 +14,13 @@ Here we track upcoming changes.
 ### Changed
  
 ### Fixed
+
+## [1.4.1] - 2026-03-12
  
+### Added
+
+ - New pre-footer code links component 
+
 ## [1.3.0] - 2025-04-07
  
 ### Added
