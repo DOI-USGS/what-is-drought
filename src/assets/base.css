@@ -11,6 +11,7 @@
   --grey-blue: #4978A7;
   --usgs-blue: #00264c;
   --faded-usgs-blue: #d8dee4;
+  --medium-blue: #4365A8;
 
   font-size: 62.5%;
 
@@ -25,6 +26,8 @@
   --color-title-text: var(--usgs-blue);
   --color-lowlight: var(--faded-usgs-blue);
   --color-code-links-background: var(--light-grey);
+  --color-prefooter-highlight: var(--medium-blue);
+
 }
 
 /* @media (prefers-color-scheme: dark) {
