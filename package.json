@@ -1,6 +1,6 @@
 {
   "name": "what-is-drought",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "How can USGS streamgage data be used to characterize streamflow drought?",
   "main": "index.html",
   "author": "USGS Vizlab",

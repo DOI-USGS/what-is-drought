@@ -36,7 +36,7 @@
     display: flex;
     justify-content: center;
     margin: 0 auto;
-    gap: 50px;
+    gap: 65px;
     flex-wrap: wrap;
     width: 100%;
     max-width: 70rem;
