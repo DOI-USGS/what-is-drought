@@ -32,7 +32,7 @@
 </script>
 
 <style scoped lang="scss">
-    $card-height: 90px;
+    $card-height: 145px;
 	.viz-icon{
 		display: flex;
 		flex-direction: column-reverse;
